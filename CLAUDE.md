@@ -10,10 +10,24 @@
 
 ## 세부 문서
 
-- `.ai/workflows/` — 작업별 워크플로우 (bug-fix, feature-dev, pr-review)
+- `.ai/workflows/` — 작업별 워크플로우 (bug-fix, feature-dev, pr-review, work-log, code-change-log)
 - `.ai/context/architecture.md` — 시스템 아키텍처
 - `.ai/context/tech-stack.md` — 기술 스택 및 의존성
-- `.ai/templates/` — 커밋 메시지, PR 템플릿
+- `.ai/templates/` — 커밋 메시지, PR, 작업 일지, 코드 변경 의도 템플릿
+
+## 작업 마무리 규칙
+
+- 작업 종료 시 반드시 작업 일지를 작성하세요.
+- 저장 경로: `docs/work-journal/YYYY-MM-DD.md`
+- 작성 기준: `.ai/workflows/work-log.md`
+- 템플릿: `.ai/templates/work-log.md`
+
+## 코드 변경 설명 규칙
+
+- 코드 작성/수정이 있었으면 코드 변경 의도 문서를 반드시 작성하세요.
+- 저장 경로: `docs/code-change-notes/YYYY-MM-DD.md`
+- 작성 기준: `.ai/workflows/code-change-log.md`
+- 템플릿: `.ai/templates/code-change-log.md`
 
 ## Claude Code 고유 설정
 

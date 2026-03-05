@@ -17,7 +17,9 @@ my-project/
 │   ├── workflows/                   # 작업별 워크플로우 정의
 │   │   ├── bug-fix.md               #   버그 수정 절차
 │   │   ├── feature-dev.md           #   기능 개발 절차
-│   │   └── pr-review.md             #   PR 리뷰 절차
+│   │   ├── pr-review.md             #   PR 리뷰 절차
+│   │   ├── work-log.md              #   작업 일지 작성 절차
+│   │   └── code-change-log.md       #   코드 변경 의도 기록 절차
 │   │
 │   ├── context/                     # 프로젝트 컨텍스트 문서
 │   │   ├── architecture.md          #   시스템 아키텍처 설명
@@ -25,7 +27,13 @@ my-project/
 │   │
 │   └── templates/                   # 템플릿 모음
 │       ├── commit-message.md        #   커밋 메시지 템플릿
-│       └── pr-template.md           #   PR 작성 템플릿
+│       ├── pr-template.md           #   PR 작성 템플릿
+│       ├── work-log.md              #   작업 일지 템플릿
+│       └── code-change-log.md       #   코드 변경 의도 템플릿
+│
+├── docs/
+│   ├── work-journal/                # 작업 일지 저장 위치 (YYYY-MM-DD.md)
+│   └── code-change-notes/           # 코드 변경 의도 문서 저장 위치 (YYYY-MM-DD.md)
 │
 └── README.md                        # 이 파일 (구조 설명)
 ```
@@ -47,6 +55,14 @@ my-project/
 ### 4. 규칙 변경은 한 곳에서만
 
 규칙을 수정할 때 `AGENTS.md` (또는 `.ai/` 하위 파일) 한 곳만 고치면 모든 AI 에이전트에 즉시 반영됩니다.
+
+### 5. 작업 종료 시 일지 작성
+
+모든 AI 에이전트는 작업을 마칠 때 `docs/work-journal/YYYY-MM-DD.md`에 작업 일지를 남깁니다.
+
+### 6. 코드 변경 의도 기록
+
+코드 작성/수정이 있었던 세션에서는 `docs/code-change-notes/YYYY-MM-DD.md`에 변경 의도와 근거를 남깁니다.
 
 ## AI 도구별 지원 현황
 
